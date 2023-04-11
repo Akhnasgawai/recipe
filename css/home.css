@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 40px;
+}
+
+.personalize-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.fav-cuisines-text{
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.cuisine-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.cuisine-list div:first-child{
+    background-image: url(../assets/american.webp);
+    background-repeat: no-repeat;
+    background-size: 130px 130px;
+}
+
+.cuisine-list div:nth-child(2){
+    background-image: url(../assets/kid-friendly.webp);
+}
+
+.cuisine-list div:nth-child(3){
+    background-image: url(../assets/italian.webp);
+}
+
+.cuisine-list div:nth-child(4){
+    background-image: url(../assets/asian.webp);
+}
+
+.cuisine-list div:nth-child(5){
+    background-image: url(../assets/mexican.webp);
+}
+
+.cuisine-list div:nth-child(6){
+    background-image: url(../assets/southern.webp);
+}
+
+.cuisine-list div:last-child{
+    background-image: url(../assets/french.webp);
+}
+
+.cuisine-list div{
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 130px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.7s;
+}
+
+.cuisine-list div:hover{
+    opacity: 0.5;
+}
+
+.cuisine-list div h6{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
