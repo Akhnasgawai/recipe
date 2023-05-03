@@ -34,6 +34,7 @@
           <a href="index.html" class="nav-link">home</a>
           <a href="about.html" class="nav-link">about</a>
           <a href="recipes.html" class="nav-link">recipes</a>
+          <a href="menu.html" class="nav-link">menu</a>
           <!-- <div class="nav-link contact-link">
             <a href="contact.html" class="btn">contact</a>
           </div> -->
@@ -42,8 +43,31 @@
     </nav>
     <div class="container">
         <div class="recipe-container">
-            <div class="img-container">
-                <img src="./assets/recipes/recipe13.webp" alt="Recipe Image">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <div class="slide first">
+                        <img src="./assets/recipes/Recipe13/recipe13.webp" alt="Recipe Image">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/recipes/Recipe13/recipe131.webp" alt="Recipe Image">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/recipes/Recipe13/recipe132.webp" alt="Recipe Image">
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                </div>
             </div>
             <div class="text-container">
                 <h3>Peaches and Cream Semifreddo</h3>

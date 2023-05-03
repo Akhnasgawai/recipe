@@ -19,14 +19,18 @@
     /* border: 1px solid red; */
     margin-top: auto;
     margin-bottom: auto;
+    transition: all 1s;
     /* font-family: 'Poppins', sans-serif; */
+}
+
+.recipe-container .text-container:hover{
+    transform: scale(1.1);
 }
 
 .recipe-container .text-container h3{
     font-weight: 700;
     font-size: 28px;
     max-width: 400px;
-    /* border: 1px solid red; */
     margin: 0;
     color: #232323;
 }
@@ -49,18 +53,113 @@
     color: orange;
 }
 
-.recipe-container .img-container{
+.slider{
+    width: 400px;
+    height: 400px;
     margin-top: auto;
     margin-bottom: auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.recipe-container .img-container img{
+.slider .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slider .slides input{
+    display: none;
+}
+
+.slider .slides .slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slider .slides .slide img{
+    width: 400px;
+    height: auto;
+}
+
+/* css for manual navigation */
+.navigation-manual{
+    position: absolute;
+    bottom: 80px;
+    width: 400px;
+    /* margin-top: -40px; */
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #3A9691;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #3A9691;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+/* css for automatic navigation */
+.navigation-auto{
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+}
+
+.navigation-auto div{
+    border: 2px solid #3A9691;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #3A9691;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #3A9691;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #3A9691;
+}
+
+/* .recipe-container .slider .slides .slide img{
     width: 400px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 0px;
     text-align: center;
-}
+} */
+
+
 
 .recipe-contents{
     display: flex;
@@ -74,6 +173,14 @@
     flex-direction: column;
     text-align: center;
     color: #4a4a4a;
+}
+
+.recipe-contents div span{
+    transition: all 1s;
+}
+
+.recipe-contents div:hover span{
+    transform: scale(1.1);
 }
 
 .recipe-contents .time, .recipe-contents .calories{
@@ -306,6 +413,13 @@ hr{
     background-repeat: no-repeat;
 }
 
+/* .nutrition-value-circle .circle11:hover{
+    border: #4a4a4a;
+    background-color: #4a4a4a;
+    background: url(../assets/icons/circleBackHover.png);
+    background-repeat: no-repeat;
+} */
+
 .nutrition-value-circle .circle11{
     background-size: 400px 100px;
 }
@@ -391,6 +505,7 @@ hr{
     border-radius: 2.2em;
     padding: 4px 15px;
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 .tags .tag-list div:hover{

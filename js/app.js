@@ -14,6 +14,11 @@ navBtnDOM.addEventListener('click', () => {
   links.classList.toggle('show-links')
 })
 
-// const date = getElement('#date')
-// const currentYear = new Date().getFullYear()
-// date.textContent = currentYear
+var counter = 1;
+setInterval(function() {
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 3){
+        counter = 1;
+    }
+}, 4000);
