@@ -1,14 +1,25 @@
 *{
     margin: 0;
+    padding: 0;
+    overflow: visible;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .container{
+    position: absolute;
+    /* top: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 6%;
-    margin-bottom: 40px;
+    margin-bottom: 6%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 0;
+    position: relative;
 }
 
 .personalize-text{
@@ -89,3 +100,150 @@
     color: #fff;
 }
 
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    position: relative; /* Added position relative */
+    z-index: 1; /* Added z-index to keep navbar on top */
+  }
+
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Style for the footer */
+
+  .main-section {
+    position: relative; /* Added position relative */
+    background-size: cover;
+    animation: moveBackground 16s ease-in-out infinite;
+    min-height: 100vh;
+  }
+
+  @keyframes moveBackground {
+    0%, 100% {background-image: url("../assets/main-banner.avif");}
+    25% {background-image: url("../assets/banner1.jpg");}
+    50% {background-image: url("../assets/banner2.jpg");}
+    100% {background-image: url("../assets/banner3.jpg");}
+  }
+
+  .main-section .content {
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .main-section .content img{
+    max-width: 38%;
+    margin-bottom: 30px;
+  }
+
+  .main-section .content h2{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .footer {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 40px auto 40px auto;
+  }
+
+  .main-footer{
+    background-color: #F8F8F8;
+  }
+
+  .footer .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .language{
+    display: flex;
+  }
+
+  .language div{
+    margin-right: 15px;
+  }
+
+  .language div a .flag{
+    width: 38px;
+    margin-right: 5px;
+  }
+
+  .language div a .international{
+    width: 30px;
+  }
+
+  .footer .for-zomato{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    line-height: 1;
+    margin-top: 40px;
+  }
+
+  .footer .for-zomato div h4{
+    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 550;
+    text-transform: uppercase;
+  }
+
+  .footer .for-zomato div:nth-child(3) .for-restaurant{
+    margin-bottom: 30px;
+  }
+
+  .footer .for-zomato div p{
+    font-weight: 100;
+    color: #696969;
+  }
+
+  .footer .for-zomato .social-links .social-media-links a{
+    padding: 8px 9px;
+    background-color: #1C1C1C;
+    border-radius: 50%;
+  }
+
+  .download-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .download-btn img{
+    width: 60%;
+  }
+
+  .footer .for-zomato .social-links h4{
+    margin-bottom: 20px;
+  }
+
+  .footer .info{
+    text-align: left;
+    line-height: 1.3;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
