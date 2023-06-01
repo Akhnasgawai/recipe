@@ -1,5 +1,3 @@
-console.log("ENTERED");
-
 const getElement = (selector) => {
   const element = document.querySelector(selector)
 

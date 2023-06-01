@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/signUp.css">
+    <title>Recipe | Sign Up</title>
+    <script src="https://kit.fontawesome.com/6926aa4cc9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-card">
+            <div class="inner-card">
+                <div class="logo"><img src="./assets/icons/A-logo.png" alt="Logo"></div>
+                <hr>
+                <div class="heading">
+                    <h2>Admin Portal</h2>
+                    <p>Let's get you logged into your account</p>
+                </div>
+                <form class="inputs" action="#" onsubmit="event.preventDefault();">
+                    <div class="name-holder">
+                        <input type="text" name="name" id="name" placeholder="Full Name">
+                        <label for="name" class="name-placeholder">Full Name *</label>
+                    </div>
+                    <div class="email-holder">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <label for="email" class="email-placeholder">Email *</label>
+                    </div>
+                    <div class="password-holder">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <label for="password" class="password-placeholder">Password *</label>
+                        <i onclick="changeIcon('password-watch','password');" id="password-watch" class="fa-regular fa-eye-slash"></i>
+                    </div>
+                    <div class="confirm-password-holder">
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+                        <label for="confirm-password" class="confirm-password-placeholder">Password *</label>
+                        <i onclick="changeIcon('confirm-password-watch','confirm-password');" id="confirm-password-watch" class="fa-regular fa-eye-slash"></i>
+                    </div>
+                    <div class="submit-btn">
+                        <input onclick="validateUser();" type="submit" value="sign in"></input>
+                    </div>
+                </form>
+                <p class="hide" id="error">Hello</p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/signUp.js"></script>
+</body>
+</html>
